@@ -1,0 +1,16 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+     <h1 th:text="${userName}"></h1>
+     <input type="text" name="names" th:value="${userName}">
+
+    <!--字符串拼接-->
+    <span th:text="'欢迎来到'+${userName}+'进行愉快的折磨'"></span></br>
+    <span th:text="|欢迎来到${userName}进行愉快的折磨~~|"></span><br>
+</body>
+</html>

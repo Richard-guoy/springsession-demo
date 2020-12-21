@@ -1,0 +1,19 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+   <!--th:if条件成立时显示-->
+    <h1 th:if="${flag=='yes'}">中公教育</h1>
+    <!--th:unless条件不成立时显示-->
+     <h1 th:unless="${flag=='no'}">有就业</h1>
+    <!--switch-->
+    <div th:switch="${menu}">
+    <p th:case="'admin'"> 管理员 </p>
+    <p th:case="${manager}"> 经理 </p>
+    </div>
+</body>
+</html>
